@@ -1,1 +1,13 @@
 <h1>POSTS</h1>
+<div>
+  <ul>
+<% @posts.each do |post| %>
+  <h3>Title</h3>
+  <%= post.title %>
+  <h6>Author</h6>
+  <%= post.user.username %>
+  <br>
+  <%= post.body %>
+  <% end %>
+  </ul>
+  </div>

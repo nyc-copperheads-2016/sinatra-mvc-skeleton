@@ -1,36 +1,26 @@
 
+<h1>Create New Post</h1>
+
 <form action='/posts' method='post'>
 
+  <div>
+    <span>Title:</span>
+    <input type='text' name='title'/>
+  </div>
 
-  <div class='row'>
-    <div class='large-2 columns'></div>
-    <div class='large-8 columns input-group'>
-      <span class='input-group-label'>Title:</span>
-      <input class='input-group-field' type='text' name='title' />
-    </div>
-
-    <div class='row'>
-    <div class='large-2 columns'></div>
-    <div class='large-8 columns input-group'>
-      <span class='input-group-label'>Author:</span>
-      <input class='input-group-field' type='text' name='author' />
-    </div>
+  <div>
+    <span>Author:</span>
+    <input type='text' name='author'/>
+  </div>
 
 
-   <div class='row'>
-      <span class='input-group-label'>Body:</span>
-    <div class='large-2 columns'></div>
-    <div class='large-8 columns input-group'>
+    <span>Body:</span>
+   <div>
     <textarea cols='40' rows='10'></textarea>
   </div>
 
-  <div class='row'>
-    <div class='large-2 columns'>
-      <input type='submit' value='Submit' />
-      </div>
-      <div>
-      <input type='button' value='Return to Index' />
-      </div>
+    <div>
+      <input type='submit' value='Submit'/>
     </div>
-  </div>
+
 </form>

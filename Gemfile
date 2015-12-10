@@ -14,6 +14,7 @@ gem 'bcrypt-ruby'
 gem 'rake'
 
 gem 'shotgun'
+gem 'faker'
 
 group :test do
   gem 'database_cleaner', '~> 1.4.1'
@@ -25,5 +26,4 @@ end
 
 group :test, :development do
   gem 'factory_girl'
-  gem 'faker'
 end
