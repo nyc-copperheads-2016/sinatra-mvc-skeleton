@@ -10,6 +10,8 @@ require 'rubygems'
 
 require 'uri'
 require 'pathname'
+require 'pry'
+require 'bcrypt'
 
 require 'pg'
 require 'active_record'
