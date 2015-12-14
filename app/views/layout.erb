@@ -12,14 +12,35 @@
   -->
   <link rel="stylesheet" href="/css/application.css">
 
-  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
   <title></title>
 </head>
 <body>
-<div id="content">
+  <div class="top-bar">
+        <% if logged_in? %>
+          <span class='welcome'>Welcome <%= current_user.username %></span>
+          <form method='post' action='/sessions'>
+            <input type='hidden' name='_method' value='DELETE' />
+            <input type='submit' value='Logout' />
+          </form>
+          <a href='/posts'>home</a>
+          <a href="/users/<%=session[:user_id]%>">Check Out Your Stats</a>
+          <a href='posts/new'>click here to create a post</a>
+        <% else %>
+          <a href='/users/new'>New User</a>
+          <a href="/sessions/new">Login</a>
+        <% end %>
+   </div>
+   <div class="line"></div>
+   <% if defined?(errors)%>
+     <ul>
+      <% errors.each do |error| %>
+        <li><%=error%></li>
+      <%end%>
+     </ul>
+   <%end%>
   <%= yield %>
-</div>
 </body>
 </html>
