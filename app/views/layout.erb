@@ -25,9 +25,7 @@
             <input type='hidden' name='_method' value='DELETE' />
             <input type='submit' value='Logout' />
           </form>
-          <a href='/posts'>home</a>
-          <a href="/users/<%=session[:user_id]%>">Check Out Your Stats</a>
-          <a href='posts/new'>click here to create a post</a>
+          <a href='#'>home(YOU NEED TO CHANGE THIS ROUTE)</a>
         <% else %>
           <a href='/users/new'>New User</a>
           <a href="/sessions/new">Login</a>
@@ -36,7 +34,7 @@
    <div class="line"></div>
    <% if defined?(errors)%>
      <ul>
-      <% errors.each do |error| %>
+      <% errors.compact.each do |error| %>
         <li><%=error%></li>
       <%end%>
      </ul>

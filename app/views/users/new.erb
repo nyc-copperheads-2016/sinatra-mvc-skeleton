@@ -1,8 +1,9 @@
-<h1>join hacker news</h1>
-<form action="/users" name="agreeform" method="post"  >
-
+<form action="/users"  method="post"  >
+<label for="user[username]">Username</label>
 <input type='text' name='user[username]' placeholder="Username"/>
+<label for="user[password]">Password</label>
 <input type='password' name='user[password]' placeholder="Password"/>
+<label for="password_confirmation">Confirm</label>
+<input type='password' name='user[password_confirmation]' placeholder="confirm"/>
 <input type="Submit" value="Submit!">
-
 </form>
