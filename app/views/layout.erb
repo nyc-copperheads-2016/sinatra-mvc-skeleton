@@ -18,6 +18,28 @@
   <title></title>
 </head>
 <body>
+  <a href="/">HOME</a>
+  <% if logged_in? %>
+    <span style="float:right;">Welcome <a href="/users/<%= current_user.id %>"><%= current_user.username %></a></span>
+    <form style="float:right;" method='post' action='/sessions'>
+      <input type='hidden' name='_method' value='DELETE' />
+      <input id='logout' type='submit' value='Logout' />
+    </form>
+  <% else %>
+    <a href="/users/new">Register</a>
+    <a href="/sessions/new">Log in</a>
+  <% end %>
+  <% if defined?(errors) %>
+
+  <div style="color:red;" class='errors'>
+    <ul>
+    <% errors.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+    </ul>
+  </div>
+
+  <% end %>
 <div id="content">
   <%= yield %>
 </div>
