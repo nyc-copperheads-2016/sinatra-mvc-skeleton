@@ -15,11 +15,46 @@
   <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title> </title>
 </head>
-<body>
-<div id="content">
-  <%= yield %>
-</div>
+
+<body class="container">
+  <nav class="nav">
+    <span id="left-nav">
+      <b><!-- Hacker News --></b>
+      <a href="#"><!-- new --></a>
+        |
+      <!-- <a href="#">comments</a> -->
+        |
+      <!-- <a href="#">show</a> -->
+    </span>
+
+    <span id="right-nav">
+      <% if logged_in? %>
+        Welcome, <a id='welcome' href="/users/<%= current_user.id %>"> <%= current_user.username %>!  |</a>
+        <form id="logout-form" method='post' action='/sessions'>
+          <input type='hidden' name='_method' value='DELETE' />
+          <input id="logout-btn" type='submit' value='Logout' />
+        </form>
+      <% else %>
+        <a href="/sessions/new">Log In</a>
+      <% end %>
+    </span>
+  </nav>
+
+  <% if defined?(errors) %>
+    <div class='errors'>
+      <ul>
+        <% errors.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= yield %>
+  </div>
+
 </body>
 </html>

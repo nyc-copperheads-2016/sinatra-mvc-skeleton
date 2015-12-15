@@ -1,4 +1,63 @@
 /* CSS declarations go here */
+
+.container {
+  margin: 10px auto;
+  width: 1200px;
+  padding: 0px 20px 0px 20px;
+}
+
+.nav {
+  /*background-color: #ff7a00;*/
+  font-size: 1rem;
+  padding-bottom: 1px;
+}
+
+#left-nav {
+  text-align: left;
+}
+
+#right-nav {
+  float: right;
+  padding-top: 7px;
+  padding-right: 5px;
+}
+
+#logout-btn {
+  border: 0px;
+  background: none;
+}
+
+#logout-form {
+  display: inline-block;
+}
+
+.make-btn {
+  border: 1px solid gray;
+  border-spacing: 2px;
+  background: #f5f5f5;
+  box-shadow: 4px 4px 4px #e5e5e5;
+  padding: 3px;
+}
+
+.errors {
+  color: red;
+}
+
+
+/*.add-comment textarea {
+  display: block;
+  width: 350px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.add-comment {
+  padding: 20px 10px;
+}*/
+
+
+/* templated */
+
 body {font-family: Vollkorn; font-size: 160%; line-height: 160%; }
 h1, h2, h3, h4, h5, h6 {font-family: Georgia; line-height:100%; margin-top: 0.5em; margin-bottom: 0.5em; color: #36AECC; font-style: italic; font-weight: 400;}
 h1 {font-size: 1.8em;}
